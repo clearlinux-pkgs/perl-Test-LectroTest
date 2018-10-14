@@ -4,25 +4,35 @@
 #
 Name     : perl-Test-LectroTest
 Version  : 0.5001
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Summary  : 'Easy, automatic, specification-based tests'
 Group    : Development/Tools
-License  : Artistic-1.0-Perl
-Requires: perl-Test-LectroTest-man
+License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
+Requires: perl-Test-LectroTest-license = %{version}-%{release}
+BuildRequires : buildreq-cpan
 
 %description
 This archive contains the distribution Test-LectroTest,
 version 0.5001:
 Easy, automatic, specification-based tests
 
-%package man
-Summary: man components for the perl-Test-LectroTest package.
+%package dev
+Summary: dev components for the perl-Test-LectroTest package.
+Group: Development
+Provides: perl-Test-LectroTest-devel = %{version}-%{release}
+
+%description dev
+dev components for the perl-Test-LectroTest package.
+
+
+%package license
+Summary: license components for the perl-Test-LectroTest package.
 Group: Default
 
-%description man
-man components for the perl-Test-LectroTest package.
+%description license
+license components for the perl-Test-LectroTest package.
 
 
 %prep
@@ -50,10 +60,12 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/perl-Test-LectroTest
+cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Test-LectroTest/LICENSE
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -62,16 +74,16 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/Compat.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/FailureRecorder.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/Generator.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/Property.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/RegressionTesting.pod
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/TestRunner.pm
-/usr/lib/perl5/site_perl/5.26.1/Test/LectroTest/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/Compat.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/FailureRecorder.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/Generator.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/Property.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/RegressionTesting.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/TestRunner.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Test/LectroTest/Tutorial.pod
 
-%files man
+%files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Test::LectroTest.3
 /usr/share/man/man3/Test::LectroTest::Compat.3
@@ -81,3 +93,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Test::LectroTest::RegressionTesting.3
 /usr/share/man/man3/Test::LectroTest::TestRunner.3
 /usr/share/man/man3/Test::LectroTest::Tutorial.3
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/perl-Test-LectroTest/LICENSE
