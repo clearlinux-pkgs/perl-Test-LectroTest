@@ -4,10 +4,10 @@
 #
 Name     : perl-Test-LectroTest
 Version  : 0.5001
-Release  : 11
+Release  : 12
 URL      : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
-Summary  : 'Easy, automatic, specification-based tests'
+Summary  : Easy, automatic, specification-based tests.
 Group    : Development/Tools
 License  : Artistic-1.0 Artistic-1.0-Perl GPL-1.0
 Requires: perl-Test-LectroTest-license = %{version}-%{release}
@@ -22,6 +22,7 @@ Easy, automatic, specification-based tests
 Summary: dev components for the perl-Test-LectroTest package.
 Group: Development
 Provides: perl-Test-LectroTest-devel = %{version}-%{release}
+Requires: perl-Test-LectroTest = %{version}-%{release}
 
 %description dev
 dev components for the perl-Test-LectroTest package.
