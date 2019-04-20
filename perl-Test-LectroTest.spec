@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-LectroTest
 Version  : 0.5001
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Summary  : Easy, automatic, specification-based tests.
