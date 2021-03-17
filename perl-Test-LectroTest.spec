@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-LectroTest
 Version  : 0.5001
-Release  : 19
+Release  : 20
 URL      : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Summary  : 'Easy, automatic, specification-based tests'
@@ -104,11 +104,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/Compat.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/FailureRecorder.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/Generator.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/Property.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/RegressionTesting.pod
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/TestRunner.pm
-/usr/lib/perl5/vendor_perl/5.30.3/Test/LectroTest/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Compat.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/FailureRecorder.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Generator.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Property.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/RegressionTesting.pod
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/TestRunner.pm
+/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Tutorial.pod
