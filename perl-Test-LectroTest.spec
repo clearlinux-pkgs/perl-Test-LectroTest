@@ -104,11 +104,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Compat.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/FailureRecorder.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Generator.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Property.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/RegressionTesting.pod
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/TestRunner.pm
-/usr/lib/perl5/vendor_perl/5.32.1/Test/LectroTest/Tutorial.pod
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Compat.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/FailureRecorder.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Generator.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Property.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/RegressionTesting.pod
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/TestRunner.pm
+/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Tutorial.pod
