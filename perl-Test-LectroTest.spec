@@ -4,7 +4,7 @@
 #
 Name     : perl-Test-LectroTest
 Version  : 0.5001
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/T/TM/TMOERTEL/Test-LectroTest-0.5001.tar.gz
 Summary  : 'Easy, automatic, specification-based tests'
@@ -104,11 +104,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Compat.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/FailureRecorder.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Generator.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Property.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/RegressionTesting.pod
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/TestRunner.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Test/LectroTest/Tutorial.pod
+/usr/lib/perl5/*
